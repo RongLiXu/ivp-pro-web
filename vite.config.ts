@@ -81,6 +81,9 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       // Turning off brotliSize display can slightly reduce packaging time
       brotliSize: false,
       chunkSizeWarningLimit: 2000,
+      rollupOptions: {
+        external: ['ant-design-vue'],
+      },
     },
     define: {
       // setting vue-i18-next
@@ -109,6 +112,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         '@iconify/iconify',
         'ant-design-vue/es/locale/zh_CN',
         'ant-design-vue/es/locale/en_US',
+        'ant-design-vue/es/RadioButton',
       ],
     },
   }
